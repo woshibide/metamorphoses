@@ -16,6 +16,7 @@
 4. Run server: `npm run dev`
 
 ## Resources
+### Hub
 - [Notion Project Hub](https://www.notion.so/Metamorphoses-Website-Team-MWT-1c78d4c5fd07804b921de84588184749)
 
 ### Learning
