@@ -1,0 +1,179 @@
+:root{
+    --primary-color: #1a1a1a;
+    --secondary-color: #333333;
+    --accent-color: #4a90e2;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --overlay-dark: rgba(0, 0, 0, 0.7);
+    --overlay-light: rgba(255, 255, 255, 0.2);
+    --nav-background: rgba(0, 0, 0, 0.5);
+    --link-color: skyblue;
+}
+
+/*
+    BASE
+*/
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    /* overflow: hidden; */ /* removed to allow scrolling */
+    position: relative; /* added for z-index context */
+}
+
+/* styles for the main content wrapper */
+.content-wrapper {
+    position: relative; 
+    z-index: 2; /* ensure content is above the canvas */
+    padding-top: 60px; /* space for the fixed nav */
+    pointer-events: none;
+}
+
+.content-wrapper * p {
+    pointer-events: all;
+}
+
+nav {
+    position: fixed; /* make nav stay at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* ensure nav is above other content */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 50px 20px;
+    min-height: 100vh; /* make each section take at least the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+}
+
+#colophon p{
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position: relative; /* to ensure it's part of the scrollable content */
+    z-index: 2;
+}
+
+
+/*
+    PARTICIPANTS
+*/
+
+#participants{
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+}
+
+.participant-wrapper{
+    display: flex;
+    gap: 20px; /* space between text and image containers */
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.participant-text-container{
+    flex: 2; /* take more space */
+    text-align: center;
+}
+
+.participant-name{
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+.artwork-name{
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.medium-badge{
+    font-size: 0.9em;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.artwork-text{
+    font-size: 1em;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+}
+.artwork-text {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.participant-image-container{
+    flex: 1; 
+    display: flex;
+    flex-direction: column; /* stack images vertically */
+    gap: 10px; 
+}
+
+.participant-image-container img {
+    width: 100%; /* make images responsive within their container */
+    height: auto;
+}
+
+.participant-image-container img:nth-child(1) {
+    outline: 3px solid blue;
+}
+.participant-image-container img:nth-child(2) {
+    outline: 3px solid red;
+}
+.participant-image-container img:nth-child(3) {
+    outline: 3px solid green;
+}
+
+a {
+    color: inherit;
+}
+
+/* canvas container styling */
+#threejs canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* ensure canvas is behind the content */
+}
