@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Maja Usak - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Lobotomy of the Body">
+					<img src="../../images/placeholder.webp" alt="Lobotomy of the Body">
+					<img src="../../images/placeholder.webp" alt="Lobotomy of the Body">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Maja Usak
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Lobotomy of the Body
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						steel plates, LCD screens, liquid latex, wires, composed perfume, 180×120×15cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Hunger wrapped in skin. A primitive machine, useless, dysfunctional. It gasps for air, its organs lie heavy, its limbs weak. You can feel it too. Falling behind, serving no higher purpose. you can't deny it. We have outgrown it. Its heart pacing, struggling to Keep up. Its lungs filled with useless filthy air. You stretch out a hand, a reflex, nothing more. An attempt—— trying to prove it still serves a purpose. But it doesn't. It's pointless. A crude mechanism, outdated. Inefficient. It has nothing left to offer. We have moved on. No more hunger, no more twitching no more trembling. Let the body decay. We are not creatures of impulse anymore. We do not live for the now. 'Lobotomy of the body' takes on philosophies of Jean Baudrillard's 'Metamorphoses metaphors metastases' and explores the disconnection between mind and body in the context of technological progress. The body, now a decaying vessel, is slowly getting consumed by the ever-expanding mind.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

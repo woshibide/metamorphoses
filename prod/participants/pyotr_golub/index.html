@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Pyotr Golub - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Nebokukuevsk">
+					<img src="../../images/placeholder.webp" alt="Nebokukuevsk">
+					<img src="../../images/placeholder.webp" alt="Nebokukuevsk">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Pyotr Golub
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Nebokukuevsk
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						mirrors, projector, openFrameworks, Raspberry PI, Pure Data, sonic distance sensor, 350×350×350cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						The space flickers. It pulses. It does not wait for the eye to adjust. Light fractures. Darkness spasms. The room breathes in tension. For some, a doorway. For others, a rupture. From the void, something watches. Neither alive nor inert, it lingers—waiting, measuring. A force that does not ask but demands: Who comes forward? It does not speak in words but in the language of disruption, by the pressure of violence. It does not threaten; it questions. Is man its equal? Does he carry something to trade for its negative freedom? This is time's challenge to man, whispered through flickering light and infinite space. The work draws its origin from Aristophanes' Birds, where the will to build a city between sky and earth first brewed. Here, audio-reactive visuals, sensor-driven inputs, and real-time graphics summon that ancient impulse. And the question is due: do you wish to reclaim control over the violence?
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/woshibide" target="_blank">
+							@woshibide
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Eva Georgescu - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Iconostasis 10">
+					<img src="../../images/placeholder.webp" alt="Iconostasis 10">
+					<img src="../../images/placeholder.webp" alt="Iconostasis 10">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Eva Georgescu
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Iconostasis 10
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						wood, acrylic paint, 250×375×100cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Sacrilege is an act of deep affirmation and repositioning against the dominant culture. In this installation, the artist seeks to reflect on the omnipresence of religion and its role in the discourse concerning queerness. Many queer Romanians have been involved in some capacity with Orthodxism, or religion in general and have been confronted by hateful messaging. As they reinven themselves by unlearning these prevailing narratives, they go through a subversive transformation process, by re-appropriating and morphing religious imagery. The artist's work is in and of itself a process of transformation, an act of sacrilege. The wooden structure represents the three doors of an Orthodox iconostasis, which are only to be entered by men. The cutout of the two lesbians sexually engaging with each other plays with the idea of visibility beyond the frame. It claims space from the religious authorities who are guarding womxn from accessing the sacred.
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/urfather4eva" target="_blank">
+							@urfather4eva
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Maya Sagara Curé - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Rituals">
+					<img src="../../images/placeholder.webp" alt="Rituals">
+					<img src="../../images/placeholder.webp" alt="Rituals">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Maya Sagara Curé
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Rituals
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						plastic, fabric, hair, 170×150×175cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						The artist's installation recreates a bathroom, reflecting the metamorphosis her mother went through from being a model to becoming a Buddhist nun. This space represents her current state of mind inspired by asceticism, veiling and memory. The objects that were once part of her rituals now serve as vestiges of her past as their meanings changed. They bear witness to a life shaped by physical appearance and the male gaze. She now exits in a paradox, she is both looked at and overlooked. The absence of a functional mirror symbolises her detachment from self-image: "You see yourself through the eyes of the others." Maya explores how a physical transformation can serve as a means of expressing an internal change to the outside world. She shows how this process allows intimacy to be communicated beyond words.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

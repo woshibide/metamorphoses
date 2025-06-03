@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Dhairya Garg - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Loss has no Script">
+					<img src="../../images/placeholder.webp" alt="Loss has no Script">
+					<img src="../../images/placeholder.webp" alt="Loss has no Script">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Dhairya Garg
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Loss has no Script
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						threads, nails, Post-lts, headset, 200×200×5cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Is grief truly a linear path? Are we meant to feel a set of predetermined emotions? How can two experiences be alike when each of us walks a unique path, forms bonds in our own way, and loves differently? How can our grief ever be the same? The only common thread is loss itself—everything else is deeply personal, raw, and unrepeatable. And yet, when someone grieves in a way we don't understand, we stand in quiet judgment, questioning how they could feel what they feel. Today, I ask you to suspend your judgment. Listen to the truths of others, and dare to share your own. What did you truly feel in the face of loss? How did the sadness touch you? What was your experience? #Weave your Grief
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/curiousdhairya" target="_blank">
+							@curiousdhairya
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

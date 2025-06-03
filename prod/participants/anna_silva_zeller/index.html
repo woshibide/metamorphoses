@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Anna Silva Zeller - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Sleep Tight, Big Shot.">
+					<img src="../../images/placeholder.webp" alt="Sleep Tight, Big Shot.">
+					<img src="../../images/placeholder.webp" alt="Sleep Tight, Big Shot.">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Anna Silva Zeller
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Sleep Tight, Big Shot.
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						Paper, Copper wire, Speaker, 400×100×100cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Not of their gold but of their days shall they be stripped. In her work 'Sleep tight, big shot.' Silva proposes a fictional solution to the injustices of the climate crisis by adapting the concept of aestivation— animal dormancy during hot, dry periods—to humans. In a shell-like space on the ceiling, People will spend a percentage of the year in prolonged states of sleep, in order to reduce emissions while preserving the comforts of modern day life. The duration of dormancy is calculated based on the amount of CO2 each person emits annually beyond a sustainable limit of 1.8 tons, a threshold necessary to achieve net-zero emissions by 2050. An example: In 2022, the average Dutch citizen emitted almost 8 tons of CO2. After the introduction of the co2 limit, they would aestivate for 175 days of the year, leaving them with 190 days of wake-time. In this system, those responsible for the greatest harm will face the consequences of their actions, in contrast to the inequities of our current reality.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

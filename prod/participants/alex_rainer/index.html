@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Alex Rainer - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Fragile Society">
+					<img src="../../images/placeholder.webp" alt="Fragile Society">
+					<img src="../../images/placeholder.webp" alt="Fragile Society">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Alex Rainer
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Fragile Society
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						glass, spray paint, aluminium tape, wood board, 250×120×10cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						In times where we happily exploit our selves for achievements or short-lived stimuli, where life outside of work, culture, rituals all in the same way lead us back to work. In these times our society accelerates towards psychological and emotional overload, where the boundaries between rest and work blur. By shattering words like "24/7", "Non Stop", or "Hyperactive", the work of the artist visually explores and communicates how constructs once considered unbreakable can be dismantled and reshaped. Not just the act of shattering but also the material itself, the glass so fragile and delicate, possesses the capacity for transformation. Once shattered, it can be melted down and reformed into something entirely new. While the act of breaking may initially appear destructive or inappropriate, it can also serve as a powerful catalyst for profound change that sometimes involves confronting discomfort.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

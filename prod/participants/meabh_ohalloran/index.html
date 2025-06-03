@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Meabh O'Halloran - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Self Portrait, 03/25">
+					<img src="../../images/placeholder.webp" alt="Self Portrait, 03/25">
+					<img src="../../images/placeholder.webp" alt="Self Portrait, 03/25">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Meabh O'Halloran
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Self Portrait, 03/25
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						chicken wire, plaster, laser print
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Combining biological and digital processes, Meabh creates a sculptural self-portrait that encompasses the plural selves that form and coexist online. As personal meaning is assigned to images, the boundaries between the self/the other and reality/fiction blur. Memes serve as tools for understanding and relating to emotions. A qualitative self emerges as identity is assigned to images through labels and captions of 'me.' Narratives develop around these plural selves, with memes becoming instruments in the ongoing process of identity creation and transformation. Guided by the organic expansion of a rhizomatic root, Meabh collects images based on the decisions of her algorithms. Using memetic autotheory, she explores how we both define and evade description, continuously becoming and unbecoming ourselves.
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/ladyslimkeith" target="_blank">
+							@ladyslimkeith
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

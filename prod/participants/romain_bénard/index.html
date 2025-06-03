@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Romain Bénard - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Communion">
+					<img src="../../images/placeholder.webp" alt="Communion">
+					<img src="../../images/placeholder.webp" alt="Communion">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Romain Bénard
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Communion
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						TV screen, webcam, computer, 100×60×10cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						The relationship between humans and nature has always been complicated, and it is in this urban space where this conflict is most visible. In the city, man is separated from nature, sheltered from the uncertainties it produces. In the cities where Romain grew up and lived the most, the architecture and urban planning seemed to hide these signs of nature that evolved with the city instaed of being against it. His goal is to account for and analyze this change, this decomposition.These forms, caused by numerous events, are both varied and unpredictable, bringing us to ourselves, to the modifications of what we have erected, to a metamorphosis of time. This communion exists between the urban and natural environments, between man and nature, which takes on its whole meaning in degradation. The artist wants to show with this project that we are united by the metamorphosis of time with nature, that we act as two passive actors in a change that only occurs through time. Romain's work highlights in 'unnatural' environments (constructions, textures) this communion and creation that the natural elements (human and nature) engender.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

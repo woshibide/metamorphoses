@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Miron Konurbaev - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Sleeping Enough?">
+					<img src="../../images/placeholder.webp" alt="Sleeping Enough?">
+					<img src="../../images/placeholder.webp" alt="Sleeping Enough?">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Miron Konurbaev
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Sleeping Enough?
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						screens (monitors & tablets of different sizes), video and sound, mattress and bedding, 60×200×100cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						"There will be sleeping enough in the grave." —Benjamin Franklin Many people share this mindset today. The culture of overconsumption, over production and overwork tells us that sleep is a waste of time, a disposable commodity that can be traded in for productivity. —"Sleeping enough?" is an exploration of our relationship with sleep. Through a collection of videos, Miron is trying o grasp various aspects of productivity-driven work culture — particularly within the digital realm — and how these affect our sleeping habits. Snugly lying on the mattress, six screens challenge the existing narrative about sleep, each posing a different question. Who sleeps in our society according to Google Images? How productive could we be if we didn't have to sleep at all? And what if we planned time for sleep as rigorously as we plan time for work? Questioning the dominating mindset, this project seeks healthier alternatives and invites the viewer to rethink their own attitude towards sleep.
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/mir.__.on" target="_blank">
+							@mir.__.on
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

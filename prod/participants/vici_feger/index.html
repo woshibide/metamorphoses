@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>ViCi Feger - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Reshaping Futures">
+					<img src="../../images/placeholder.webp" alt="Reshaping Futures">
+					<img src="../../images/placeholder.webp" alt="Reshaping Futures">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						ViCi Feger
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Reshaping Futures
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						painted acrylic mural, two video projections, two pillars, 200×600×250cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						The system is collapsing. Exploitation, division, and instability are not anomalies—they are the design. But while the old world crumbles, a new one is already taking root. In this work, the artist captures the tension between destruction and regeneration. A large-scale mural depicts the ruins of a failing system gradually transforming into roots and a thriving ecosystem. Overlaid on this surface, a multimodal video collage intensifies the contrast. Chaotic imagery of fear, division, and collapse gives way to scenes of community, resilience, and renewal, revealing that alternative ways of living are not distant ideals, but present realities. Murals, historically tools of resistance, stand as fixed and monumental statements. The projection, in contrast, introduces fluidity—reminding us that the future is not set in stone. It is being shaped, in real-time, by those who refuse to wait.The time to act is now!
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/pici.vici" target="_blank">
+							@pici.vici
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

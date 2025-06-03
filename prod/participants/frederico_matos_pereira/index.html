@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Frederico Matos Pereira - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Redefine Food">
+					<img src="../../images/placeholder.webp" alt="Redefine Food">
+					<img src="../../images/placeholder.webp" alt="Redefine Food">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Frederico Matos Pereira
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Redefine Food
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						plasticine, mirrors, 200×200×100cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Frederico Pereira explores the future of food through the lens of the modern food industry, highlighting the tension between hyperreality and consumer awareness. A dining table is set with plates of food crafted from plasticine, offering a playful yet unsettling interpretation of what we consume. Surrounded by mirrors, the viewer is prompted to look beyond the surface, revealing a hidden video showing the process of manufacturing these artificial foods. Through this juxtaposition, Frederico aims to challenge the processed nature of contemporary food and the deceptive practices within the industry. The mirrors reflect not only the food but also the unseen forces shaping our consumption choices. By redefining food production in this surreal manner, the work invites viewers to reflect on the importance of informed decision-making and the power of awareness in shaping a more conscious, sustainable future.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

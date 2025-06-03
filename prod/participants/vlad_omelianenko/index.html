@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Vlad Omelianenko - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="A Graphic Tone">
+					<img src="../../images/placeholder.webp" alt="A Graphic Tone">
+					<img src="../../images/placeholder.webp" alt="A Graphic Tone">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Vlad Omelianenko
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						A Graphic Tone
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						paper, graphite, 210×210×50cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						"Graphite is soft carbon. Were it hard enough to withstand contact and remain totally self-contained it would not be useful for writing. Graphite gives up some of itself upon contact with paper. Graphite suffers a loss that leaves a mark." —Nathaniel Mackey Translation is entirely mysterious. In his work, Vlad Omelianeko is trying to see the creation process as one of translation rather than anything else. What is it that gets translated? What is the original? Translation shows that language is a slippery thing. It also always comes in a certain form, be it on a paper, on a screen, or a voice. A voice is not a visual form. "A Graphic Tone". The work is a collage of rubbings or marks, which Vlad traces and leaves behind. It is trying to find and seize the connection between "graphite"—to rub, to mark, to affect, to touch—and "graphic"—a form, to write, to create—reflecting on the above mentioned question.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

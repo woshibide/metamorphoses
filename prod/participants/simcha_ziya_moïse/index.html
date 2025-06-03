@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Simcha Ziya Moïse - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Detached">
+					<img src="../../images/placeholder.webp" alt="Detached">
+					<img src="../../images/placeholder.webp" alt="Detached">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Simcha Ziya Moïse
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Detached
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						hair, photo prints, 59×168×8cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Hair is always changing—growing, shedding, twisting into knots, or being cut away. It is both a record of time and a way to convey identity.Yet, once separated from us, it often provokes discomfort. Stray hairs on a bathroom sink or a tangled mess serve as unsettling reminders of what was once part of us. Detached, hair is treated as waste—something to be washed away, vacuumed up, and discarded without thought, as if its significance vanishes the moment it leaves our bodies. But is this the way to go forward? In a world striving for sustainability, can hair be rethought as more than just something disposable? Can it still possess beauty when no longer attached to our bodies, or does its value depend solely on being part of us? Instead of dismissing it, its potential could be recognized—transforming what was once overlooked into something purposeful. With this work, Simcha invites the viewer to reconsider the value of hair beyond the body by seeing it as a material with meaning and possibility.
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/sssimcha" target="_blank">
+							@sssimcha
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

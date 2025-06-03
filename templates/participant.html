@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}{{ participant.get('name', 'participant') }} - Metamorphoses KABK{% endblock %}
+
+{% block extra_css %}
+<style>
+    .participant-info {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .participant-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .participant-name {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .participant-medium {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 20px;
+    }
+    .participant-content {
+        line-height: 1.6;
+    }
+    .participant-field {
+        margin-bottom: 20px;
+    }
+    .field-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="participant-info">
+    <div class="participant-header">
+        <h2 class="participant-name">{{ participant.get('name', 'unknown') }}</h2>
+        {% if participant.get('medium') %}
+        <div class="participant-medium">{{ participant.get('medium') }}</div>
+        {% endif %}
+    </div>
+    
+    <div class="participant-content">
+        {% for key, value in participant.items() %}
+        {% if value and key not in ['name', 'medium'] %}
+        <div class="participant-field">
+            <div class="field-label">{{ key.replace('_', ' ').title() }}:</div>
+            <div>{{ value }}</div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Jiyun Nam - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Coming in and going out">
+					<img src="../../images/placeholder.webp" alt="Coming in and going out">
+					<img src="../../images/placeholder.webp" alt="Coming in and going out">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Jiyun Nam
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Coming in and going out
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						yeast, bacteria, tea, sugar, glass, 150×250×100cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Jiyun presents an installation that visualizes the transformation of sugar and tea into kombucha through the fermentation process of a SCOBY (Symbiotic Culture of Bacteria and Yeast) over time. SCOBY, a microbial culture where bacteria and yeast coexist, absorbs nutrients and organic matter from its environment, metabolizing them into a new living substance—kombucha. This metabolic process is not merely a chemical reaction but is deeply connected to the cycles of life, as well as the boundaries between life and death. The impact of these microbial activities gradually expands, manifesting through visible physical transformations. Similarly, the human body is not an isolated entity but a system that coexists with microbes. Every day, we consume food, digest it, and rely on microbial interactions to sustain our bodies, constantly exchanging matter with the environment. Through the act of consuming the kombucha produced by SCOBY, the artist poses the questions. "What do we take in, and what do we release?"
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/nam.ji.yun" target="_blank">
+							@nam.ji.yun
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

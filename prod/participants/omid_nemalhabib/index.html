@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Omid Nemalhabib - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Verses of Destruction">
+					<img src="../../images/placeholder.webp" alt="Verses of Destruction">
+					<img src="../../images/placeholder.webp" alt="Verses of Destruction">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Omid Nemalhabib
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Verses of Destruction
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						Stone, letter carving tools, cement blocks, soil, and burnt paper, 300×300×300cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Do you know who truly rules this land? It is the one who turns every thing you see into ruin. In the end, the house of tyranny will collapse; What stands tall today will crumble tomorrow. The noble and the worthy have sunk into the depths of destruction, The city once home to the great is now trampled by strangers. —Hafez (1315–1390) Inspired by Hafez's poem, Omid presents a vision of decay and destruction in his installation, exploring the transformation of societies and the concept of metamorphosis in politics and history. Through fragments of stone, cement blocks, soil, and burnt paper inscribed with verses and patterns, the scene portrays ruins and the inevitable collapse of power. The artist's presence—sitting on a stool and carving into stone—symbolizes the struggle to preserve memory amid decay. As he reads the poem in both Farsi and English, the performance reflects on how power rises and falls, leaving behind remnants that speak of impermanence and the relentless cycle of history.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

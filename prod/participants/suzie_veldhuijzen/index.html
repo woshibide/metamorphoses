@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Suzie Veldhuijzen - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="My Believes">
+					<img src="../../images/placeholder.webp" alt="My Believes">
+					<img src="../../images/placeholder.webp" alt="My Believes">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Suzie Veldhuijzen
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						My Believes
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						cabinets, blanket, God figure, 100×300×100cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						"People who have a religion should be glad, for not everyone has the gift of believing in heavenly things." —Anne Frank When the artist was 7, she felt jealous of people who believe. So she made up her own religion by drawing a third eye on a doll to represent her own god, and she built a hut in her room. The hut became a place for everyday prayer. Although she didn't know how to pray. This experimental religion ended after a week. Suzie is still interested in religion but can't seem to find her own faith. She lost confidence to be sure about what she believes without questioning it. Her creative, innocent and naive power which she had when she was 7 has disappeared. In her work Suzie is searching for this feeling of real trust in herself and in her own beliefs. She invites you into the hut she made when she was 7 to think about your own believe and how this has been shaped over the years.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Metamorphoses KABK{% endblock %}
+
+{% block extra_css %}
+<style>
+    .participants-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .participant-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+    .participant-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .participant-card a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .participant-name {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="intro">
+    <h2>participants</h2>
+    <p>explore the works of {{ participants|length }} participants in the metamorphoses exhibition.</p>
+</div>
+
+<div class="participants-grid">
+    {% for participant in participants %}
+    <div class="participant-card">
+        <a href="participants/{{ participant.get('name', 'unknown')|replace(' ', '_')|lower }}.html">
+            <div class="participant-name">{{ participant.get('name', 'unknown') }}</div>
+            {% if participant.get('medium') %}
+            <div class="participant-medium">{{ participant.get('medium') }}</div>
+            {% endif %}
+            {% if participant.get('description') %}
+            <div class="participant-preview">{{ participant.get('description')[:100] }}{% if participant.get('description')|length > 100 %}...{% endif %}</div>
+            {% endif %}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Andre Kahveciyan - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,30 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Red lights and plugs going nowhere">
+					<img src="../../images/placeholder.webp" alt="Red lights and plugs going nowhere">
+					<img src="../../images/placeholder.webp" alt="Red lights and plugs going nowhere">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Andre Kahveciyan
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Red lights and plugs going nowhere
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						A4 sheets, -
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						Andre Kahveciyan's installation 'red lights and plugs going nowhere' transforms the exhibition space into a trace of a rave—an echo of movement, music, and fleeting moments. A4 sheets, scattered across the space, act as portals through time. Capturing glimpses of a night that is neither past nor present. Setlists, cigarette buds, bottle caps, and taped-down cables suggest a history of energy and sound. The spots of red floors reflect the glow of club lights. By altering the gallery's function, the installation explores how space is shaped by human presence, rhythm, and ritual. It is a study of transformation—how spaces absorb and release energy, how memory lingers in objects.
 					</p>
-					{% if participant.instagram_account %}
+					
 					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
+						<a href="https://instagram.com/anxietyandre" target="_blank">
+							@anxietyandre
 						</a>
 					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>

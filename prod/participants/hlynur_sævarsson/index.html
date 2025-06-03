@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{{ participant.Artist_name }} - Metamorphoses</title>
+	<title>Hlynur Sævarsson - Metamorphoses</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../styles.css">
@@ -23,30 +23,24 @@
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
 					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<img src="../../images/placeholder.webp" alt="Light: New World">
+					<img src="../../images/placeholder.webp" alt="Light: New World">
+					<img src="../../images/placeholder.webp" alt="Light: New World">
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
-						{{ participant.Artist_name }}
+						Hlynur Sævarsson
 					</h2>
 					<h3 class="artwork-name">
-						{{ participant.artwork_name }}
+						Light: New World
 					</h3>
 					<p class="medium-badge">
-						{{ participant.Material }}{% if participant.Dimensions %}, {{ participant.Dimensions }}{% endif %}
+						Virtual reality headset, chair, dirt and flowers, 100×100×100cm
 					</p>
 					<p class="artwork-text">
-						{{ participant.description }}
+						In Light: New World, Hlynur explores our perception of light and sight. In a void, a digital space that resembles reality is slowly brought to light. Small portions of what we perceive to be light slowly reveals our surroundings. What would it look like to gain access to a new way of sensing our surroundings? In the artwork, Hlynur creates a new virtual world that manipulates light in unnatural ways, revealing the surrounding landscapes and nature. By making the installation in virtual reality, Hlynur eliminates the limitations of reality and the space becomes endless. Light is manipulated in abstract ways that resemble the abstract idea of gaining access to new senses. In the virtual space the viewer can take a seat in the familiar Monobloc chair which serves as a way of grounding and familiarity.
 					</p>
-					{% if participant.instagram_account %}
-					<p class="instagram-link">
-						<a href="https://instagram.com/{{ participant.instagram_account.replace('@', '') }}" target="_blank">
-							{{ participant.instagram_account }}
-						</a>
-					</p>
-					{% endif %}
+					
 				</div>
 			</div>
 		</section>
