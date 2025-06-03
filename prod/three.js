@@ -1,3 +1,5 @@
+const DEVELOPMENT = false; // changed from development = true and renamed from DEVELOPMENT
+
 import * as THREE from 'three';
 import Stats from 'three/addons/libs/stats.module.js';
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
@@ -8,7 +10,6 @@ import { GPUComputationRenderer } from 'three/addons/misc/GPUComputationRenderer
 const WIDTH = 64;
 const BIRDS = WIDTH * WIDTH;
 
-const DEVELOPMENT = true; // changed from development = true and renamed from DEVELOPMENT
 
 /* bake animation into texture and create geometry from base model */
 const BirdGeometry = new THREE.BufferGeometry();
@@ -229,40 +230,49 @@ function init() {
 		}
 	});
 
-	let effectController;
-	if (DEVELOPMENT) { // if in development mode, create the new gui.
-		guiInstance = new GUI(); // create and store the new instance
+	// define effectcontroller with desired base/default values.
+	// these values will be used for simulation uniforms regardless of development mode.
+	let effectController = {
+		separation: 20.0,
+		alignment: 20.0,
+		cohesion: 20.0,
+		freedom: 0.75,
+		size: sizes[selectModel],
+		count: Math.floor(BIRDS / 4)
+	};
 
-		effectController = {
+	// define valueschanger to update uniforms and drawing based on effectcontroller.
+	// this function is called initially and when gui controls change (if development mode is on).
+	const valuesChanger = function () {
+		if (velocityUniforms) { // ensure velocityuniforms is initialized
+			velocityUniforms['separationDistance'].value = effectController.separation;
+			velocityUniforms['alignmentDistance'].value = effectController.alignment;
+			velocityUniforms['cohesionDistance'].value = effectController.cohesion;
+			velocityUniforms['freedomFactor'].value = effectController.freedom;
+		}
+		if (materialShader) { // ensure materialshader is initialized
+			materialShader.uniforms['size'].value = effectController.size;
+		}
+		// ensure indicesperbird is defined and birdgeometry exists
+		if (typeof indicesPerBird !== 'undefined' && BirdGeometry) {
+			BirdGeometry.setDrawRange(0, indicesPerBird * effectController.count);
+		}
+	};
 
-			separation: 20.0,
-			alignment: 20.0,
-			cohesion: 20.0,
-			freedom: 0.75,
-			size: sizes[ selectModel ],
-			count: Math.floor( BIRDS / 4 )
+	// apply the initial effectcontroller values to the simulation's uniforms and settings.
+	valuesChanger();
 
-		};
+	// if in development mode, set up the gui.
+	// the general gui cleanup is handled before this block (lines 207-219).
+	if (DEVELOPMENT) {
+		guiInstance = new GUI(); // create and store the new gui instance
 
-		const valuesChanger = function () {
-
-			velocityUniforms[ 'separationDistance' ].value = effectController.separation;
-			velocityUniforms[ 'alignmentDistance' ].value = effectController.alignment;
-			velocityUniforms[ 'cohesionDistance' ].value = effectController.cohesion;
-			velocityUniforms[ 'freedomFactor' ].value = effectController.freedom;
-			if ( materialShader ) materialShader.uniforms[ 'size' ].value = effectController.size;
-			BirdGeometry.setDrawRange( 0, indicesPerBird * effectController.count );
-
-		};
-
-		valuesChanger();
-
-		guiInstance.add( effectController, 'separation', 0.0, 100.0, 1.0 ).onChange( valuesChanger );
-		guiInstance.add( effectController, 'alignment', 0.0, 100, 0.001 ).onChange( valuesChanger );
-		guiInstance.add( effectController, 'cohesion', 0.0, 100, 0.025 ).onChange( valuesChanger );
-		guiInstance.add( effectController, 'size', 0, 1, 0.01 ).onChange( valuesChanger );
-		guiInstance.add( effectController, 'count', 0, BIRDS, 1 ).onChange( valuesChanger );
-
+		guiInstance.add(effectController, 'separation', 0.0, 100.0, 1.0).onChange(valuesChanger);
+		guiInstance.add(effectController, 'alignment', 0.0, 100, 0.001).onChange(valuesChanger);
+		guiInstance.add(effectController, 'cohesion', 0.0, 100, 0.025).onChange(valuesChanger);
+		guiInstance.add(effectController, 'size', 0, 1, 0.01).onChange(valuesChanger);
+		guiInstance.add(effectController, 'count', 0, BIRDS, 1).onChange(valuesChanger);
+		// note: 'freedom' is part of effectcontroller but not exposed in the gui by default.
 	}
 
 	initBirds( effectController ); // effectcontroller will be undefined if !DEVELOPMENT
