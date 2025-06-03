@@ -22,10 +22,17 @@
 		<section id="participant-detail">
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
-					<!-- placeholder images for now -->
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					<!-- display actual participant photos -->
+					{% if images %}
+						{% for image in images %}
+						<img src="../../{{ image }}" alt="{{ participant.artwork_name }} - Image {{ loop.index }}">
+						{% endfor %}
+					{% else %}
+						<!-- fallback to placeholder if no images available -->
+						<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+						<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+						<img src="../../images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					{% endif %}
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">

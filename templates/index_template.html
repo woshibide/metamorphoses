@@ -67,7 +67,7 @@
 			<div class="participants-grid">
 				{% for participant in participants %}
 				<div class="participant-card">
-					<a href="./participants/{{ participant.Artist_name.replace(' ', '_').lower() }}/index.html">
+					<a href="./participants/{{ participant.safe_name }}/index.html">
 						<h3>{{ participant.Artist_name }}</h3>
 						<p>{{ participant.artwork_name }}</p>
 					</a>
@@ -79,9 +79,16 @@
 			{% for participant in participants %}
 			<div class="participant-wrapper">
 				<div class="participant-image-container">
-					<img src="./images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="./images/placeholder.webp" alt="{{ participant.artwork_name }}">
-					<img src="./images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					{% if image_map[participant.safe_name] %}
+						{% for image in image_map[participant.safe_name] %}
+						<img src="./{{ image }}" alt="{{ participant.artwork_name }} - Image {{ loop.index }}">
+						{% endfor %}
+					{% else %}
+						<!-- fallback to placeholder if no images available -->
+						<img src="./images/placeholder.webp" alt="{{ participant.artwork_name }}">
+						<img src="./images/placeholder.webp" alt="{{ participant.artwork_name }}">
+						<img src="./images/placeholder.webp" alt="{{ participant.artwork_name }}">
+					{% endif %}
 				</div>
 				<div class="participant-text-container">
 					<h2 class="participant-name">
